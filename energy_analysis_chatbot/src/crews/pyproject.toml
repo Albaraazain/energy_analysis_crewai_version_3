@@ -1,0 +1,26 @@
+[project]
+name = "energy_analysis_chatbot"
+version = "0.1.0"
+description = "Energy Usage Analysis Chatbot using CrewAI"
+authors = [
+    { name = "Your Name", email = "you@example.com" },
+]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.76.2",
+    "sentence-transformers>=2.5.1",
+    "chromadb>=0.4.24",
+    "pydantic>=2.6.1",
+    "pandas>=2.2.0",
+    "numpy>=1.26.4",
+    "plotly>=5.19.0",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+energy_chatbot = "energy_analysis_chatbot.main:run"
+run_crew = "energy_analysis_chatbot.main:run"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
